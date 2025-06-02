@@ -1,0 +1,12 @@
+@media (any-hover: hover) {
+  .form__input:hover {
+    background-color: #899d9d;
+  }
+}
+
+@media (any-hover: hover) {
+  .form-submit__btn:hover {
+    border-color: #91ac46;
+    background-color: #91ac46;
+  }
+}

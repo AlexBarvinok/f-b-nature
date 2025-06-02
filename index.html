@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
     <title>F B</title>
   </head>
   <body class="page__body">
@@ -270,13 +272,18 @@
               </p>
             </div>
             <form class="contact__form">
-              <label class="form-label"
-                ><input type="text" placeholder="Имя" class="form-input" />
+              <label class="form__label"
+                ><input type="text" name="name" placeholder="Имя" class="form__input" />
               </label>
-              <label class="form-label"
-                ><input type="email" placeholder="Email" class="form-input" />
+              <label class="form__label"
+                ><input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="form__input"
+                />
               </label>
-              <button class="btn-reset form-submit__btn"></button>
+              <button class="btn-reset form-submit__btn">Отправить</button>
             </form>
           </div>
         </section>
