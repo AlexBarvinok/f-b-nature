@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/media.css" />
 
     <title>F B</title>
+    <script defer src="js/script.js"></script>
   </head>
   <body class="page__body">
     <div class="site-container">
@@ -21,7 +22,7 @@
               <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
               <li class="nav__item"><a href="#gallery" class="nav__link">Галерея</a></li>
               <li class="nav__item">
-                <a href="#about" class="nav__link">О лаборатории</a>
+                <a href="#about" class="nav__link">О&nbsp;лаборатории</a>
               </li>
               <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
             </ul>
@@ -120,7 +121,7 @@
         <section class="gallery" id="gallery">
           <h2 class="visually-hidden">Галлерея</h2>
           <div class="container gallery__container">
-            <div class="gallery__top grid">
+            <div class="gallery__top">
               <article class="card">
                 <div class="card__image">
                   <div class="card__image-number">
@@ -225,9 +226,24 @@
         <section class="about" id="about">
           <div class="container">
             <h2 class="about__title">Новые артефакты</h2>
-            <div class="about__wrapper grid">
+            <div class="about__wrapper">
               <div class="about__img">
                 <img src="./img/about-card.png" alt="" />
+                <a href="#" class="about__hint">
+                  Swipe to&nbsp;see more
+                  <svg
+                    width="81"
+                    height="8"
+                    viewBox="0 0 81 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M80.3536 4.35356C80.5488 4.1583 80.5488 3.84172 80.3536 3.64645L77.1716 0.464473C76.9763 0.269211 76.6597 0.269211 76.4645 0.464473C76.2692 0.659735 76.2692 0.976317 76.4645 1.17158L79.2929 4.00001L76.4645 6.82843C76.2692 7.0237 76.2692 7.34028 76.4645 7.53554C76.6597 7.7308 76.9763 7.7308 77.1716 7.53554L80.3536 4.35356ZM-4.37114e-08 4.5L80 4.50001L80 3.50001L4.37114e-08 3.5L-4.37114e-08 4.5Z"
+                      fill="#899D9D"
+                    />
+                  </svg>
+                </a>
               </div>
               <article class="about__card">
                 <h3 class="about__subtitle">Kurische Nehrung 24</h3>
