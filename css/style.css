@@ -264,6 +264,25 @@ img {
   gap: 30px;
 }
 
+.swiper {
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  margin-right: 20px;
+}
+
 .card {
   display: flex;
   width: 255px;
@@ -361,6 +380,10 @@ img {
   font-size: 24px;
   line-height: 150%;
   color: var(--white);
+}
+button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .about {
