@@ -261,7 +261,6 @@ img {
 .gallery__top {
   display: flex;
   margin-bottom: 26px;
-  gap: 30px;
 }
 
 .swiper {
@@ -277,15 +276,16 @@ img {
 
 .swiper-wrapper {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-  margin-right: 20px;
+  flex-shrink: 0;
 }
 
 .card {
   display: flex;
-  width: 255px;
   flex-direction: column;
   border: 1px solid var(--background-shade);
 }
@@ -384,6 +384,40 @@ img {
 button[disabled] {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.pagination-fraction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-fraction span {
+  display: block;
+}
+
+pagination-bullets {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+.custom-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--background-shade);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.custom-bullet:not(:last-child) {
+  margin-right: 20px;
+}
+.custom-bullet.active {
+  opacity: 1;
+  background: var(--primary-green);
 }
 
 .about {
