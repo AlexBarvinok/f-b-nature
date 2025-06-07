@@ -39,25 +39,6 @@ const swiper = new Swiper(mySwiper, {
   },
 });
 
-function updatePagination(swiper) {
-  // Текущее положение (нумерация с 1)
-  paginationCurrent.textContent = swiper.realIndex + 1;
-  // Всего страниц (слайдов)
-  paginationTotal.textContent = swiper.snapGrid.length;
-
-  // Отключаем/включаем кнопки
-  if (swiper.isBeginning) {
-    btnPrev.setAttribute('disabled', 'disabled');
-  } else {
-    btnPrev.removeAttribute('disabled');
-  }
-  if (swiper.isEnd) {
-    btnNext.setAttribute('disabled', 'disabled');
-  } else {
-    btnNext.removeAttribute('disabled');
-  }
-}
-
 function updateCustomPagination(swiper) {
   const isMobile = window.innerWidth <= 768;
 
@@ -66,9 +47,9 @@ function updateCustomPagination(swiper) {
     paginationBullets.style.display = 'flex';
 
     // Если количество bullets не совпадает с количеством слайдов — пересоздаём
-    if (paginationBullets.children.length !== swiper.slides.length) {
+    if (paginationBullets.children.length !== swiper.snapGrid.length) {
       paginationBullets.innerHTML = '';
-      for (let i = 0; i < swiper.slides.length; i++) {
+      for (let i = 0; i < swiper.snapGrid.length; i++) {
         const bullet = document.createElement('span');
         bullet.className = 'custom-bullet';
         bullet.addEventListener('click', () => {
@@ -93,8 +74,4 @@ function updateCustomPagination(swiper) {
     paginationCurrent.textContent = swiper.realIndex + 1;
     paginationTotal.textContent = swiper.snapGrid.length;
   }
-
-  // Кнопки disabled
-  btnPrev.disabled = swiper.isBeginning;
-  btnNext.disabled = swiper.isEnd;
 }
