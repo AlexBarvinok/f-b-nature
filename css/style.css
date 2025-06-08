@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'Open Sans';
   src: url('../fonts/OpenSans-Regular.woff2'), format('woff2');
   font-display: swap;
   font-weight: 400;
@@ -9,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans';
+  font-family: 'Open Sans';
   src: url('../fonts/OpenSans-Bold.woff2'), format('woff2');
   font-display: swap;
   font-weight: 700;
@@ -17,8 +15,8 @@
 }
 
 @font-face {
-  font-family: 'OpenSans';
-  src: url('../fonts/OpenSans-SemiBold.woff2'), format('woff2');
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-SemiBold.woff2'), format('woff2');
   font-display: swap;
   font-weight: 600;
   font-style: normal;
@@ -47,6 +45,13 @@
   font-weight: 400;
   font-style: normal;
 }
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+}
 
 :root {
   --font-family: 'Open Sans', sans-serif;
@@ -62,16 +67,6 @@
   --green-focus: #83a440;
   --green-hover: #91ac46;
   --red: #e24949;
-}
-
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-family), sans-serif;
-  font-weight: 400;
 }
 
 *,
@@ -101,7 +96,8 @@ img {
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
-  font-family: var(--font-family);
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
 }
 
 .grid {
@@ -176,6 +172,10 @@ img {
 .nav__list {
   display: flex;
   align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 64px;
 }
 
 .nav__link {
@@ -288,15 +288,7 @@ img {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--background-shade);
-}
-
-.card__content {
-  display: flex;
-  flex-direction: column;
-  padding: 16px 16px 24px;
-  flex-grow: 1;
-
-  align-items: flex-start;
+  height: 100%;
 }
 
 .card__image {
@@ -310,7 +302,6 @@ img {
 
 .card__image img {
   min-height: 120px;
-
   max-width: 100%;
 }
 
@@ -327,6 +318,14 @@ img {
   font-size: 16px;
   text-align: center;
   color: var(--grey);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 24px;
+  flex-grow: 1;
+  align-items: flex-start;
 }
 
 .card__title {
