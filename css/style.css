@@ -50,9 +50,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-}
-
 :root {
   --font-family: 'Open Sans', sans-serif;
   --second-family: 'Cormorant', sans-serif;
